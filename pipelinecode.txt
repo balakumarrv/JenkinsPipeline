@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        choice(name: 'Application', choices: ['app1', 'app2', 'app3'], description: 'Pick something')
+        choice(name: 'Application', choices: ['app1', 'app2', 'app3', 'app4', 'app5'], description: 'Pick something')
 
     }
     environment {
@@ -10,7 +10,7 @@ pipeline {
     stages {
         stage('Preparation') { 
             steps {
-                git 'C:\\Users\\Admin\\Desktop\\project\\.git'
+                git 'https://github.com/balakumarrv/JenkinsPipeline.git'
                 
             }
         }
